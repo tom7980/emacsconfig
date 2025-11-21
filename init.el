@@ -22,11 +22,15 @@
 (require 'init-f)
 (require 'init-markdown-mode)
 (require 'init-yasnippet)
+(require 'init-completion)
+(require 'init-lsp-mode)
 
 (require 'init-avy)
 (require 'init-magit)
 (require 'init-crux)
 (require 'init-avy)
+(require 'init-diff-hl)
+(require 'init-rust)
 
 (require 'init-projectile)
 (require 'init-verilog-ext)
@@ -37,7 +41,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(safe-local-variable-values
-   '((lsp-clients-svlangserver-includeIndexing "riscv/*.{v,sv,svh,vh}"
+   '((lsp-clients-svlangserver-includeIndexing "**/*.{v,sv,svh,vh}")
+     (lsp-clients-svlangserver-includeIndexing "riscv/*.{v,sv,svh,vh}"
 					       "components/*.{v,sv,svh,vh}")
      (lsp-clients-svlangserver-workspace-additional-dirs
       "/home/tom/projects/ulxws/components"

@@ -9,9 +9,9 @@
           xref
           capf
           hierarchy
-          eglot
+          ;;eglot
           ;;lsp
-          ;;lsp-bridge
+          lsp-bridge
           ;;lspce
           flycheck
           beautify
@@ -28,6 +28,7 @@
           ports))
   :config
   (verilog-ext-mode-setup)
-  (verilog-ext-eglot-set-server 've-svlangserver))
+  (verilog-ext-lsp-bridge-set-server 've-svlangserver)
+  (add-hook 'verilog-ext-mode-hook 'flycheck-mode))
 
 (provide 'init-verilog-ext)
