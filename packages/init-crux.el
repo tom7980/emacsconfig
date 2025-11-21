@@ -1,0 +1,17 @@
+(use-package crux
+  :straight (crux :type git :host github :repo "bbatsov/crux")
+  :init
+  (global-set-key [remap move-beginning-of-line] #'crux-move-beginning-of-line)
+  (global-set-key [C-Backspace] #'crux-kill-line-backwards)
+  (global-set-key (kbd "C-c d") #'crux-duplicate-current-line-or-region)
+  (global-set-key (kbd "C-c M-d") #'crux-duplicate-and-comment-current-line-or-region)
+  (global-set-key (kbd "C-c r") #'crux-rename-file-and-buffer)
+  (global-set-key (kbd "C-c I") #'crux-find-user-init-file)
+  (global-set-key (kbd "C-c ,") #'crux-find-user-custom-file)
+  (global-set-key (kbd "C-c D") #'crux-find-current-directory-dir-locals-file)
+  (global-set-key [remap keyboard-quit] #'crux-keyboard-quit-dwim)
+  (global-set-key (kbd "M-o") #'crux-smart-open-line)
+  (global-set-key (kbd "C-c k") #'crux-kill-other-buffers)
+  (global-set-key (kbd "C-c t") #'crux-visit-term-buffer))
+
+(provide 'init-crux)

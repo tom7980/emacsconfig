@@ -1,0 +1,5 @@
+(use-package yasnippet
+  :straight (yasnippet :type git :host github :repo "joaotavora/yasnippet")
+  :config (yas-global-mode 1))
+
+(provide 'init-yasnippet) 
