@@ -14,6 +14,8 @@
 		(neotree-dir project-dir)
 		(neotree-find file-name)))
 	(message "Could not find projectile root directory."))))
-  :bind ([f8] . my/neotree-project-dir))
+  :bind ([f8] . my/neotree-project-dir)
+  :config
+  (add-hook 'neo-after-create-hook (lambda (x) (display-line-numbers-mode -1)))) ;;Neotree passes an arg to the hook so ignore it
 
 (provide 'init-neotree)

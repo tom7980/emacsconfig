@@ -1,5 +1,5 @@
 (use-package ace-window
   :straight t
-  :bind ("M-p" . 'ace-window))
+  :bind ("M-]" . 'ace-window))
 
 (provide 'init-ace-window)

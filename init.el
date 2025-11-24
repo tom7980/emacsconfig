@@ -36,6 +36,8 @@
 (require 'init-crux)
 (require 'init-diff-hl)
 (require 'init-rust)
+(require 'init-docker)
+(require 'init-ibuffer)
 
 (require 'init-consult)
 (require 'init-projectile)
