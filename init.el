@@ -18,6 +18,9 @@
 
 (straight-use-package 'use-package)
 
+(global-display-line-numbers-mode)
+
+(require 'init-nerd-icons)
 (require 'init-zenburn)
 (require 'init-f)
 (require 'init-markdown-mode)
@@ -25,14 +28,17 @@
 (require 'init-completion)
 (require 'init-lsp-mode)
 
+(require 'init-smartparens)
+(require 'init-ace-window)
 (require 'init-avy)
 (require 'init-magit)
 (require 'init-crux)
-(require 'init-avy)
 (require 'init-diff-hl)
 (require 'init-rust)
 
+(require 'init-consult)
 (require 'init-projectile)
+(require 'init-neotree)
 (require 'init-verilog-ext)
 (require 'init-verilog-ts-mode)
 (custom-set-variables

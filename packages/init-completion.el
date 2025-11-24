@@ -43,6 +43,13 @@
   :config
   (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter))
 
+(use-package marginalia
+  :straight t
+  :bind (:map minibuffer-local-map
+	      ("M-A" . marginalia-cycle))
+  :init
+  (marginalia-mode))
+
 (use-package emacs
   :custom
   (context-menu-mode t)

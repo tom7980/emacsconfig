@@ -1,6 +1,6 @@
 (use-package avy
   :straight (avy :type git :host github :repo "abo-abo/avy")
-  :bind (("C-;" . 'avy-goto-char-2)
+  :bind (("C-," . 'avy-goto-char-2)
 	 ("C-'" . 'avy-goto-line)    ;; Consistent with ivy-avy
 	 ("M-g c" . 'avy-goto-char)
 	 ("M-g e" . 'avy-goto-word-0)  ;; lots of candidates
