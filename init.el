@@ -27,6 +27,7 @@
 (require 'init-yasnippet)
 (require 'init-completion)
 (require 'init-lsp-mode)
+(require 'init-sessions)
 
 (require 'init-smartparens)
 (require 'init-ace-window)
