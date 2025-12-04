@@ -36,6 +36,7 @@
 (require 'init-crux)
 (require 'init-diff-hl)
 (require 'init-rust)
+(require 'init-nix)
 (require 'init-docker)
 (require 'init-ibuffer)
 
@@ -44,6 +45,10 @@
 (require 'init-neotree)
 (require 'init-verilog-ext)
 (require 'init-verilog-ts-mode)
+
+(require 'init-org-mode)
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
