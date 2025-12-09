@@ -72,9 +72,4 @@
      (verilog-ext-flycheck-slang-include-path
       "/home/tom/projects/ulxws/components"
       "/home/tom/projects/ulxws/riscv" "/home/tom/projects/ulxws"))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+

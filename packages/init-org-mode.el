@@ -7,14 +7,14 @@
               (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "PHONE" "MEETING"))))
 
 (setq org-todo-keyword-faces
-      (quote (("TODO" :inherit 'nerd-icons-lred :weight bold)
-              ("NEXT" :inherit 'nerd-icons-lblue :weight bold)
-              ("DONE" :inherit 'nerd-icons-lgreen :weight bold)
-              ("WAITING" :inherit 'nerd-icons-lorange :weight bold)
-              ("HOLD" :inherit 'nerd-icons-maroon :weight bold)
-              ("CANCELLED" :inherit 'nerd-icons-lgreen :weight bold)
-              ("MEETING" :inherit 'nerd-icons-lgreen :weight bold)
-              ("PHONE" :inherit 'nerd-icons-lgreen :weight bold))))
+      '(("TODO" . (:inherit 'nerd-icons-lred :weight bold))
+              ("NEXT" . (:inherit 'nerd-icons-lblue :weight bold))
+              ("DONE" . (:inherit 'nerd-icons-lgreen :weight bold))
+              ("WAITING" . (:inherit 'nerd-icons-lorange :weight bold))
+              ("HOLD" . (:inherit 'nerd-icons-maroon :weight bold))
+              ("CANCELLED" . (:inherit 'nerd-icons-lgreen :weight bold))
+              ("MEETING" . (:inherit 'nerd-icons-lgreen :weight bold))
+              ("PHONE" . (:inherit 'nerd-icons-lgreen :weight bold))))
 
 ;; This was originally going to set a parent task to NEXT if a subtask was set to NEXT but I
 ;; decided that it wasn't worth having the parent tasks show up in the agenda
@@ -31,6 +31,7 @@
 	(current-state (org-get-todo-state)))
     (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
 
+(setq org-startup-indented t)
 (add-hook 'org-after-todo-statistics-hook #'org-summary-todo)
 ;; (add-hook 'org-after-todo-state-change-hook #'my/org-update-parent-next)
 
