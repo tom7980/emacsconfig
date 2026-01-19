@@ -23,6 +23,7 @@
 (require 'init-nerd-icons)
 (require 'init-zenburn)
 (require 'init-f)
+(require 'init-treesit-auto)
 (require 'init-markdown-mode)
 (require 'init-yasnippet)
 (require 'init-completion)
@@ -40,6 +41,7 @@
 (require 'init-docker)
 (require 'init-ibuffer)
 
+(require 'init-ocaml)
 (require 'init-consult)
 (require 'init-projectile)
 (require 'init-neotree)
@@ -47,6 +49,8 @@
 (require 'init-verilog-ts-mode)
 
 (require 'init-org-mode)
+(require 'init-which-key)
+(require 'init-guru-mode)
 
 
 (custom-set-variables
@@ -73,3 +77,4 @@
       "/home/tom/projects/ulxws/components"
       "/home/tom/projects/ulxws/riscv" "/home/tom/projects/ulxws"))))
 
+(put 'upcase-region 'disabled nil)
