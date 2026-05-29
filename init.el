@@ -20,6 +20,14 @@
 
 (global-display-line-numbers-mode)
 
+(push '(css-mode . css-ts-mode) major-mode-remap-alist)
+(push '(python-mode . python-ts-mode) major-mode-remap-alist)
+(push '(javascript-mode . js-ts-mode) major-mode-remap-alist)
+(push '(js-json-mode . json-ts-mode) major-mode-remap-alist)
+(push '(typescript-mode . typescript-ts-mode) major-mode-remap-alist)
+(push '(c-mode . c-ts-mode) major-mode-remap-alist)
+(push '(c++-mode . c++-ts-mode) major-mode-remap-alist)
+
 (require 'init-nerd-icons)
 (require 'init-zenburn)
 (require 'init-f)
@@ -49,6 +57,7 @@
 (require 'init-verilog-ts-mode)
 
 (require 'init-org-mode)
+(require 'org-tempo)
 (require 'init-which-key)
 (require 'init-guru-mode)
 
@@ -59,7 +68,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(safe-local-variable-values
-   '((lsp-clients-svlangserver-includeIndexing "**/*.{v,sv,svh,vh}")
+   '((projectile-project-compilation-cmd . "cd buildDir && meson compile")
+     (projectile-project-configure-cmd . "meson setup buildDir")
+     (lsp-clients-svlangserver-includeIndexing "**/*.{v,sv,svh,vh}")
      (lsp-clients-svlangserver-includeIndexing "riscv/*.{v,sv,svh,vh}"
 					       "components/*.{v,sv,svh,vh}")
      (lsp-clients-svlangserver-workspace-additional-dirs
@@ -75,6 +86,13 @@
       "/home/tom/projects/ulxws/riscv" "/home/tom/projects/ulxws")
      (verilog-ext-flycheck-slang-include-path
       "/home/tom/projects/ulxws/components"
-      "/home/tom/projects/ulxws/riscv" "/home/tom/projects/ulxws"))))
+      "/home/tom/projects/ulxws/riscv" "/home/tom/projects/ulxws")))
+ '(session-use-package t nil (session)))
 
 (put 'upcase-region 'disabled nil)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

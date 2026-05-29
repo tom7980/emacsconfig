@@ -16,9 +16,10 @@
     ;; Optionally configure the cape-capf-buster.
     (setq-local completion-at-point-functions (list (cape-capf-buster #'lsp-completion-at-point))))
   :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
-         (rust-mode . lsp)
+         (rust-ts-mode . lsp)
 	 (c++-ts-mode . lsp)
 	 (c-ts-mode . lsp)
+	 (python-ts-mode . lsp)
          ;; if you want which-key integration
          (lsp-mode . lsp-enable-which-key-integration)
 	 (lsp-completion-mode . my/lsp-mode-setup-completion))
@@ -32,6 +33,8 @@
 (use-package lsp-ui
   :straight t
   :commands lsp-ui-mode
+  :config
+  (setq lsp-auto-guess-root t)
   :custom
   (lsp-ui-doc-enable t)
   (lsp-ui-doc-use-childframe t)

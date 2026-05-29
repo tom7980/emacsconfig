@@ -16,15 +16,6 @@
               ("MEETING" . (:inherit 'nerd-icons-lgreen :weight bold))
               ("PHONE" . (:inherit 'nerd-icons-lgreen :weight bold))))
 
-;; This was originally going to set a parent task to NEXT if a subtask was set to NEXT but I
-;; decided that it wasn't worth having the parent tasks show up in the agenda
-;; (defun my/org-update-parent-next ()
-;;   (if (string-equal org-state "NEXT")
-;;       (save-excursion
-;; 	(unless (not (org-up-heading-safe))
-;; 	  (let ((parent-todo (org-get-todo-state)))
-;; 	    (message "State changed to NEXT, parent state: `%s'" parent-todo))))))
-
 (defun org-summary-todo (n-done n-not-done)
   "Switch entry to DONE when all subentries are done, to TODO otherwise."
   (let ((org-log-done org-todo-log-states) ;turn off logging
@@ -36,5 +27,10 @@
 ;; (add-hook 'org-after-todo-state-change-hook #'my/org-update-parent-next)
 
 (setq org-agenda-files '("~/org/"))
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((python . t)
+   (emacs-lisp . t)))
 
 (provide 'init-org-mode)
