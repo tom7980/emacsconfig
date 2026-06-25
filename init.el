@@ -48,6 +48,7 @@
 (require 'init-nix)
 (require 'init-docker)
 (require 'init-ibuffer)
+(require 'init-expand-region)
 
 (require 'init-ocaml)
 (require 'init-consult)
